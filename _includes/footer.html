@@ -2,6 +2,9 @@
 <section id="contact">
 	<div class="inner">
 		<section>
+			<header class="major">
+				<h2>Contact Us</h2>
+			</header>
 			<form action="https://formspree.io/{{ site.email }}" method="POST">
 				<div class="field half first">
 					<label for="name">Name</label>
@@ -40,7 +43,10 @@
 				<div class="contact-method">
 					<span class="icon alt fa-phone"></span>
 					<h3>Phone</h3>
-					<span>{{ site.phone }}</span>
+					<span>{{ site.phone }}<br /></span>
+					<span>{{ site.city }}</span>
+					<span>{{ site.state }}<br /></span>
+					<span>{{ site.country }}</span>
 				</div>
 			</section>
 		</section>
@@ -82,15 +88,15 @@
 				<li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 				{% endif %}
 			</ul> -->
+			<br />
 			<ul class="copyright">
+				<li></li>
 				<li>&copy; {{ site.title }} {{ site.subtitle }}</li>
-				<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-				<li>Jekyll integration: <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li>
-
+				<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP - Jekyll Integration</a></li>
+				<li></li>
 			</ul>
 		</div>
 	</footer>
-
 </div>
 
 <!-- Scripts -->

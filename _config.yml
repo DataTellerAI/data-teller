@@ -5,7 +5,7 @@ email: contact.us@data-teller.com
 description:
 baseurl: "/data-teller" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
-author:
+author: Data Teller
 street_address:
 city: Bogotá
 state: D.C.
