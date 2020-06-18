@@ -29,6 +29,43 @@
         </div>
     </section>
 
+    <!-- Display the countdown timer in an element -->
+    <div>
+        <h3 style="text-align: center;">Official Launch</h3>
+        <strong><p id="demo" style="text-align: center; font-size: 16pt;"></p></strong>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jun 21, 2020 12:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "We are already Online";
+            }
+        }, 1000);
+    </script>
+
     <!-- Main -->
     <div id="main">
 
@@ -36,13 +73,13 @@
         <section id="one" class="tiles">
             <div class="inner">
                 <header class="major">
-                    <h2><br />Team</h2>
+                    <h2>Team</h2>
                 </header>
                 <p>Four students from Holberton School of Engineering from different backgrounds</p>
                 <section class="members" id="members">
-                    <div class="container">            
+                    <div class="container">
                         <div class="speaker-slider">
-            
+
                             <div class="member-info wow fadeIn" data-wow-delay="0s">
                                 <h4><br />Adriana Ariza</h4>
                                 <img src="assets/images/aa.jpeg" alt="avatar" class="img-responsive center-block">
@@ -58,12 +95,13 @@
                                 </a>
                             </div>
                             <!-- end .speaker-info -->
-            
+
                             <div class="member-info wow fadeIn" data-wow-delay="0.1s">
                                 <h4><br />Julian Naranjo</h4>
                                 <img src="assets/images/jn.jpeg" alt="avatar" class="img-responsive center-block">
                                 <span>Full Stack Engineer / Backend Engineer / DevOps Leader</span>
-                                <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/srnaranjo/">
+                                <a class="btn btn-social-icon btn-linkedin"
+                                    href="https://www.linkedin.com/in/srnaranjo/">
                                     <span class="fa fa-linkedin"></span>
                                 </a>
                                 <a class="btn btn-social-icon btn-github" href="https://github.com/JDorangetree">
@@ -74,12 +112,13 @@
                                 </a>
                             </div>
                             <!-- end .speaker-info -->
-            
+
                             <div class="member-info wow fadeIn" data-wow-delay="0.2s">
                                 <h4><br />Juan Pablo Zuluaga</h4>
                                 <img src="assets/images/jp.jpeg" alt="avatar" class="img-responsive center-block">
                                 <span>Full Stack Engineer / Frontend Leader</span>
-                                <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/juan-pablo-zuluaga-pizza-a4739499/">
+                                <a class="btn btn-social-icon btn-linkedin"
+                                    href="https://www.linkedin.com/in/juan-pablo-zuluaga-pizza-a4739499/">
                                     <span class="fa fa-linkedin"></span>
                                 </a>
                                 <a class="btn btn-social-icon btn-github" href="https://github.com/juanzuluaga91">
@@ -97,7 +136,8 @@
                                     Campo Elías Pinillos Galindo</h4>
                                 <img src="assets/images/ce.jpeg" alt="avatar" class="img-responsive center-block">
                                 <span>Full Stack Engineer / Data Scientist / Machine Learning Engineer</span>
-                                <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/campoeliaspinillosgalindo/">
+                                <a class="btn btn-social-icon btn-linkedin"
+                                    href="https://www.linkedin.com/in/campoeliaspinillosgalindo/">
                                     <span class="fa fa-linkedin"></span>
                                 </a>
                                 <a class="btn btn-social-icon btn-github" href="https://github.com/campopinillos">
@@ -109,13 +149,13 @@
                             </div>
                             <!-- end .members-info -->
                         </div>
-            
+
                     </div>
                     <!-- end .container -->
                 </section>
-                
-                
-                
+
+
+
                 <ul class="actions">
                     <li><a href="#two" class="button next scrolly">Stack</a></li>
                 </ul>
@@ -137,54 +177,65 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="stack-item wow fadeInLeft">
-                                            <div class="stack-icon"><img src="assets/images/react.png" class="icon"></div>
+                                            <div class="stack-icon"><img src="assets/images/react.png" class="icon">
+                                            </div>
                                             <h3 class="stack-title">ReactJS</h3>
-                                            <p>JavaScript library to develop the frontend of the web app seeking a better UI/UX</p>
+                                            <p>JavaScript library to develop the frontend of the web app seeking a
+                                                better UI/UX.</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="stack-item wow fadeInRight">
-                                            <div class="stack-icon"><img src="assets/images/python.png" class="icon"></div>
+                                            <div class="stack-icon"><img src="assets/images/python.png" class="icon">
+                                            </div>
                                             <h3 class="stack-title">Python</h3>
-                                            <p>Python is a high-level, general-purpose programming language for develop the
-                                                backend in order to ensure models management and future decentralized transaction
-                                                in real-time </p>
+                                            <p>Python is a high-level, general-purpose programming language for develop
+                                                the
+                                                backend in order to ensure models management and future decentralized
+                                                transaction
+                                                in real-time.</p>
                                         </div>
                                     </div>
-            
+
                                     <div class="col-sm-6">
                                         <div class="stack-item wow fadeInLeft">
-                                            <div class="stack-icon"> <img src="assets/images/django.png" class="icon"></div>
+                                            <div class="stack-icon"> <img src="assets/images/django.png" class="icon">
+                                            </div>
                                             <h3 class="stack-title">Django REST</h3>
-                                            <p>Framework based in Python for building APIS's. This used to ensure secureness of
-                                                authentication and management
-                                                of users registered in the platform</p>
+                                            <p>Framework based in Python for building APIS's. This used to ensure
+                                                secureness of
+                                                authentication and management of users registered in the platform.</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="stack-item wow fadeInRight">
-                                            <div class="stack-icon"> <img src="assets/images/mongo.png" class="icon"></div>
+                                            <div class="stack-icon"> <img src="assets/images/mongo.png" class="icon">
+                                            </div>
                                             <h3 class="stack-title">MongoDB</h3>
-                                            <p>MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.
+                                            <p>MongoDB is a general purpose, document-based, distributed database built
+                                                for modern application developers and for the cloud era.
                                                 No relational database.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="stack-item wow fadeInRight">
-                                            <div class="stack-icon"> <img src="assets/images/lockup.png" class="icon"> </div>
+                                            <div class="stack-icon"> <img src="assets/images/lockup.png" class="icon">
+                                            </div>
                                             <h3 class="stack-title">Firebest</h3>
-                                            <p>Firebase gives you functionality like analytics, databases, messaging and crash reporting so you can move quickly and focus on your users.
+                                            <p>Firebase gives you functionality like analytics, databases, messaging and
+                                                crash reporting so you can move quickly and focus on your users.
                                                 <br>
-                                                Firebase is built on Google infrastructure and scales automatically, for even the largest apps.
+                                                Firebase is built on Google infrastructure and scales automatically, for
+                                                even the largest apps.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-            
+
                             </div>
                         </div>
-            
+
                     </div>
                     <!-- end .container -->
                 </section>
@@ -211,9 +262,9 @@
                         <h3 class="stack-title">Sckit Learn</h3>
                         <p>
                             <li>Simple and efficient tools for predictive data analysis</li>
-                            <li>Allows to preprocess data to find pattern</li>
-                            <li>Built on NumPy, SciPy, and matplotlib</li>
                             <li>Open source, commercially usable, accessible to everybody and reusable</li>
+                            <li>Built on NumPy, SciPy, and matplotlib</li>
+                            <li>Allows to preprocess text data</li>
                         </p>
                     </div>
                 </div>
