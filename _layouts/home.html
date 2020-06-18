@@ -16,12 +16,16 @@
     <section id="banner" class="major">
         <div class="inner">
             <header class="major">
-                <h1>{{ page.landing-title }}</h1>
+                <h1>Data Teller</h1>
             </header>
             <div class="content">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
+                <p style="text-transform: uppercase; font-size: 28pt">
+                    <br />
+                    Improve your business decisions usings data analytics and maching learning tools
+                    <br /><br />
+                </p>
                 <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                    <li><a href="#one" class="button next scrolly">Crew Members</a></li>
                 </ul>
             </div>
         </div>
@@ -31,17 +35,43 @@
     <div id="main">
 
         <!-- One -->
-        {% include tiles.html %}
+        <section id="one" class="tiles">
+            <div class="inner">
+                <header class="major">
+                    <h2>Crew Members</h2>
+                </header>
+                <p>Four students from Holberton School of Engineering with different backgrounds</p>
+                <ul class="actions">
+                    <li><a href="#two" class="button next scrolly">Tools</a></li>
+                </ul>
+            </div>
+        </section>
+
 
         <!-- Two -->
         <section id="two">
             <div class="inner">
                 <header class="major">
-                    <h2>Massa libero</h2>
+                    <h2>Development Tools</h2>
                 </header>
                 <p>{{ content }}</p>
                 <ul class="actions">
-                    <li><a href="landing.html" class="button next">Get Started</a></li>
+                    <li><a href="#three" class="button next scrolly">Machine Learning</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Three -->
+
+        <section id="three" class="tiles">
+            <div class="inner">
+                <header class="major">
+                    <h2>Machine Learning</h2>
+                </header>
+                <p></p>
+                <ul class="actions">
+                    <li><a href="#two" class="button next scrolly">Gender Predictor</a></li>
                 </ul>
             </div>
         </section>
