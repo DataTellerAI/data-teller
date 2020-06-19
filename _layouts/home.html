@@ -36,7 +36,8 @@
             <p id="demo" style="text-align: center; font-size: 16pt;"></p>
         </strong>
     </div>
-
+    
+    <script src="code.jquery.com/jquery-latest.js"></script>
     <script>
         // Set the date we're counting down to
         var countDownDate = new Date("Jun 19, 2020 11:00:00").getTime();
@@ -66,6 +67,29 @@
                 document.getElementById("demo").innerHTML = "We are already Online";
             }
         }, 1000);
+        $(document).ready(main);
+ 
+var contador = 1;
+ 
+function main(){
+	$('.menu_bar').click(function(){
+		// $('nav').toggle(); 
+ 
+		if(contador == 1){
+			$('nav').animate({
+				left: '0'
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('nav').animate({
+				left: '-100%'
+			});
+		}
+ 
+	});
+ 
+};
     </script>
 
     <!-- Main -->
@@ -79,8 +103,6 @@
                 </header>
                 <p>Four Holberton software engineering students with different backgrounds</p>
                 <div class="container" style="display: flex; justify-content: center; align-items: center;">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="row row-cols-4">
                             <div class="card"
                                 style=" margin-right: 2em; background-color: rgba(106, 114, 131, 0.1); padding: 1em 0; padding-left: 0; width: 18rem; border: 1px solid #6A7283; border-radius: 12px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
                                 <img style="border-radius: 8px; width: 250px; height: 250px;"
@@ -112,7 +134,7 @@
                                     src="assets/images/jn.jpeg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Julián Naranjo</h5>
-                                    <p style="padding: 0 1em;" class="card-text">SWE - Data Engineer DevOps <br />
+                                    <p style="padding: 0 1em;" class="card-text">SWE - Data Engineer <br/> DevOps <br />
                                         Economist</p>
                                     <a class="btn btn-social-icon btn-linkedin"
                                         href="https://www.linkedin.com/in/srnaranjo/" target="_blank">
@@ -134,7 +156,7 @@
                                     src="assets/images/jp.jpeg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Juan Pablo Zuluaga</h5>
-                                    <p style="padding: 0 1em;" class="card-text">SWE - Frontend Leader <br/> Management & marketing </p>
+                                    <p style="padding: 0 1em;" class="card-text">SWE <br />Frontend Leader <br/> Management & marketing </p>
                                     <a class="btn btn-social-icon btn-linkedin"
                                         href="https://www.linkedin.com/in/campoeliaspinillosgalindo"
                                         target="_blank">
@@ -157,7 +179,7 @@
                                     src="assets/images/ce.jpeg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Campo Elías Pinillos</h5>
-                                    <p style="padding: 0 1em;" class="card-text">SWE - Data ML Engineer <br/> MSc. Economics - Economist </p>
+                                    <p style="padding: 0 1em;" class="card-text">SWE <br/> Data ML Engineer <br/> MSc. Economics  Economist </p>
                                     <a class="btn btn-social-icon btn-linkedin"
                                         href="https://www.linkedin.com/in/juan-pablo-zuluaga-pizza-a4739499/"
                                         target="_blank">
