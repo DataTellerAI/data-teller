@@ -2,16 +2,10 @@
 <div id="wrapper">
 
 <!-- Header -->
-<header id="header"{% if page.layout == "landing" %} class=" style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
-	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
+<header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
 	<nav>
 		<ul class="actions" style="font-size: 13px;">
-			<li><a href="#one" class="">Team</a></li>
-			<li><a href="#two" class=" ">Stack</a></li>
-			<li><a href="#three" class=" ">Machine Learning</a></li>
-			<li><a href="#four" class=" ">Gender Predictor</a></li>
-			<li><a href="http://127.0.0.1:3000/" class="">Predict</a></li>
-			<li><a href="#contact" class="">Contact Us</a></li>
+			<a href="#menu">Menu</a>
 		</ul>
 	</nav>
 </header>
@@ -29,5 +23,13 @@
 		        <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
 		    {% endif %}
 		{% endfor %}
+	</ul>
+		<ul class="actions vertical">
+		<li><a href="#one" class="button fit">Team</a></li>
+		<li><a href="#two" class="button fit">Stack</a></li>
+		<li><a href="#three" class="button fit">Machine Learning</a></li>
+		<li><a href="#four" class="button fit">Gender Predictor</a></li>
+		<li><a href="http://127.0.0.1:3000/" class="button special fit">Predict</a></li>
+		<li><a href="#contact" class="button fit">Contact Us</a></li>
 	</ul>
 </nav>
